@@ -39,8 +39,9 @@ int main(){
         }
     }while(input <= 0 || input > 15);
 
-    int multiplicand = 1;
+    /* my attempt at solving it
     
+    int multiplicand = 1;
     for(int i = 0; i < input; i++){ // outer loop runs exactly input times (ex: input = 4, then it will show a table from 1-4)
         for(int j = 1; j <= input; j++){ // j in the inner loop will be the multiplier that will multiply up until the inputted number
             cout << multiplicand << " x " << j << " = " << multiplicand*j << " ";
@@ -48,7 +49,19 @@ int main(){
     multiplicand++; // increments only after the inner loop is done with the output
     cout << endl;
     }
+    
+    */
 
+    //apparently this one's the most optimized based on my previous lab exercise
+    //code outputs the same, the difference is that it efficiently uses row and col without unnecessary variables being added
+    for(int row = 1; row <= input; row++){
+        for(int col = 1; col <=input; col++){
+            cout << row << "x" << col << "=" << row*col<< " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
+
+    
 
